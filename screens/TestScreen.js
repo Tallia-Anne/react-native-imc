@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const TestScreen = () => {
+const TestScreen = (navigation) => {
    
         return (
             <View styles={styles.container} >
@@ -9,7 +9,7 @@ const TestScreen = () => {
                 <Button
                     title="Retour à l'accueil"
                     onPress={() => {
-                        navigator.navigate('HomeScreen');
+                        navigation.navigate('HomeScreen');
                     }}
                 />
             </View>

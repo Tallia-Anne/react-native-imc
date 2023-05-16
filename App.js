@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { HomeScreen, CalculatorScreen, TestScreen } from './screens';
+import { NavigationTabs } from './navigation';
 
 // on va stocker la fonction createNativeStack dans une variable qui stack 
 // createStackNavigator() permet de créer une stack de navigation
@@ -17,6 +18,11 @@ export default function App() {
       <StatusBar style="auto" />
       <Stack.Navigator>
         <Stack.Screen
+          name="NavigationTabs"
+          component={NavigationTabs}
+          options={{ headerShown: false, }}
+           />
+        <Stack.Screen
           name="HomeScreen"
           component={HomeScreen} />
         <Stack.Screen
@@ -25,6 +31,7 @@ export default function App() {
         <Stack.Screen
           name="TestScreen"
           component={TestScreen} />
+       
       </Stack.Navigator>
     </NavigationContainer>
   );
