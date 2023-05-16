@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const TestScreen = (navigation) => {
+const TestScreen = ({ navigation }) => {
    
         return (
             <View styles={styles.container} >
