@@ -1,10 +1,10 @@
 // permet de gerer les imporations des écrans 
 import HomeScreen from "./HomeScreen";
 import CalculatorScreen from "./CalculatorScreen";
-import TestScreen from "./TestScreen";
+import AboutScreen from "./AboutScreen";
 
 export {
     HomeScreen,
     CalculatorScreen,
-    TestScreen,
+    AboutScreen,
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Image, Button } from 'react-native';
 import { WelcomeText } from '../Components';
+import * as RNElements from '@rneui/base';
 
 class HomeScreen extends React.Component {
     render() {
@@ -9,14 +10,15 @@ class HomeScreen extends React.Component {
         }
         return (
             <View style={styles.container}>
+                <WelcomeText
+                    text="Calculateur d'IMC"
+                /> 
                 <Image
                     source={require('../assets/poids.jpg')}
                     style={styles.homeImg}
                 />
-                <WelcomeText
-                    text="Calculateur d'IMC" 
-                /> 
-                <Button
+               
+                <RNElements.Button
                     // le titre du bouton
                     title="Aller sur la page CalculatorScreen"
                     // couleur du fond

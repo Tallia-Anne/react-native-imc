@@ -3,7 +3,7 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { HomeScreen, CalculatorScreen, TestScreen } from './screens';
+import { HomeScreen, CalculatorScreen, AboutScreen } from './screens';
 import { NavigationTabs } from './navigation';
 
 // on va stocker la fonction createNativeStack dans une variable qui stack 
@@ -29,8 +29,8 @@ export default function App() {
           name="CalculatorScreen"
           component={CalculatorScreen} />
         <Stack.Screen
-          name="TestScreen"
-          component={TestScreen} />
+          name="AboutScreen"
+          component={AboutScreen} />
        
       </Stack.Navigator>
     </NavigationContainer>

@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Foundation as FoundationIcons } from 'react-native-vector-icons';
 import HomeScreen from '../screens/HomeScreen';
 import CalculatorScreen from '../screens/CalculatorScreen';
-import TestScreen from '../screens/TestScreen';
+import AboutScreen from '../screens/AboutScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -10,42 +10,53 @@ const NavigationTabs = () => {
     return (
         // backBehavio permet de revenir à la page précédente par ordre exemple sur la page de connexion
         <Tab.Navigator backBehavior='order' >
-            <Tab.Screen name="HomeScreen"
+            <Tab.Screen
+                name="HomeScreen"
+
                 component={HomeScreen}
                 options={
                     {
+
                         tabBarlabel: "Accueil",
-                        tabBarIcon: () => {
-                            <FoundationIcons name="home" color={color}  size={size} />
+                        tabBarActibeTinColor: "#333",
+                        tabBarInactiveTintColor: "#888",
+                        tabBarIcon: ({ color, size }) => {
+                            <FoundationIcons name="home" color={color} size={size} />
                         },
-                        title:"Accueil",
+                        title: "Accueil",
                     }
                 }
             />
-            <Tab.Screen name="Calculator"
+            <Tab.Screen
+                name="Calculator"
                 component={CalculatorScreen}
                 options={
                     {
                         tabBarlabel: "Mon IMC",
-                        tabBarIcon: () => {
+                        tabBarActibeTinColor: "#333",
+                        tabBarInactiveTintColor: "#888",
+                        tabBarIcon: ({ color, size }) => {
                             <FoundationIcons name="pencil" color={color} size={size} />
                         },
                         title: "Calculer mon IMC",
                     }
                 }
-                 />
-            <Tab.Screen name="Test"
-                component={TestScreen}
+            />
+            <Tab.Screen
+                name="About"
+                component={AboutScreen}
                 options={
                     {
-                        tabBarlabel: "Test",
-                        tabBarIcon: () => {
+                        tabBarlabel: "About",
+                        tabBarActibeTinColor: "#333",
+                        tabBarInactiveTintColor: "#888",
+                        tabBarIcon: ({ color, size }) => {
                             <FoundationIcons name="widget" color={color} size={size} />
                         },
-                        title: "Test",
+                        title: "About",
                     }
                 }
-                 />
+            />
         </Tab.Navigator>
     );
 }

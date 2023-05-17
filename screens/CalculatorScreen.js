@@ -1,19 +1,14 @@
 import React from 'react';
 import {View,Text, Button,  StyleSheet} from 'react-native';
+import { ImcCalculator } from '../Components';
 
 
 
 
 const CalculatorScreen = ({ navigation }) => {
         return (
-            <View styles={styles.view} >
-                <Text>Screen: Calculator Screen</Text>
-                <Button
-                    title="Retour à l'accueil"
-                    onPress={() => {
-                        navigation.navigate("HomeScreen");
-                    }}
-                />
+            <View style={styles.view} >
+               <ImcCalculator/>
             </View>
         );
     }   
