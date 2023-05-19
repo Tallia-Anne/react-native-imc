@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Button } from 'react-native';
+import { View, StyleSheet, Image, } from 'react-native';
 import { WelcomeText } from '../Components';
 import * as RNElements from '@rneui/base';
 
@@ -14,16 +14,32 @@ class HomeScreen extends React.Component {
                     text="Calculateur d'IMC"
                 /> 
                 <Image
-                    source={require('../assets/poids.jpg')}
+                    source={require('../assets/imc-calculator-home-logo.png_image.png')}
                     style={styles.homeImg}
                 />
                
                 <RNElements.Button
                     // le titre du bouton
-                    title="Aller sur la page CalculatorScreen"
-                    // couleur du fond
-                    color="#F266AB"
+                    title="Calculer mon IMC"
                     onPress={goToCalculator}
+                    //  le style du titre du bouton 
+                    titleStyle={{
+                        color: 'white',
+                        marginHorizontal: 20,
+                        fontWeight: 'bold',
+                        letterSpacing: 1.5,
+                        fontSize: 24,
+                    }
+                    }
+                    // style du bouton 
+                    buttonStyle={{
+                        backgroundColor: 'black',
+                        borderWhidth: 2,
+                        paddingTop: 16,
+                        paddingBottom: 16,
+                        borderColor: 'white',
+                        borderRadius: 8,
+                    }}
                 />
             </View>
         );
@@ -33,17 +49,17 @@ class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        // display: 'flex',
         flex: 1,
-        backgroundColor: '#ffffff',
-        justifyContent: 'center',
+        backgroundColor: '#fff',
+        justifyContent: 'space-between',
         alignItems: 'center',
+        paddingBottom: 64,
     },
     homeImg: {
-        width: 256,
-        height: 256,
-        borderRadius: 64,
-        margin: 16,
+        width: 170,
+        height: 72,
+        borderRadius: 4,
+        margin: 96,
     }
 
 });

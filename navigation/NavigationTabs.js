@@ -20,9 +20,9 @@ const NavigationTabs = () => {
                         tabBarlabel: "Accueil",
                         tabBarActibeTinColor: "#333",
                         tabBarInactiveTintColor: "#888",
-                        tabBarIcon: ({ color, size }) => {
+                        tabBarIcon: ({ color, size }) => (
                             <FoundationIcons name="home" color={color} size={size} />
-                        },
+                        ),
                         title: "Accueil",
                     }
                 }
@@ -35,9 +35,9 @@ const NavigationTabs = () => {
                         tabBarlabel: "Mon IMC",
                         tabBarActibeTinColor: "#333",
                         tabBarInactiveTintColor: "#888",
-                        tabBarIcon: ({ color, size }) => {
+                        tabBarIcon: ({ color, size }) => (
                             <FoundationIcons name="pencil" color={color} size={size} />
-                        },
+                        ),
                         title: "Calculer mon IMC",
                     }
                 }
@@ -50,10 +50,10 @@ const NavigationTabs = () => {
                         tabBarlabel: "About",
                         tabBarActibeTinColor: "#333",
                         tabBarInactiveTintColor: "#888",
-                        tabBarIcon: ({ color, size }) => {
+                        tabBarIcon: ({ color, size }) => (
                             <FoundationIcons name="widget" color={color} size={size} />
-                        },
-                        title: "About",
+                        ),
+                        title: " A propos ",
                     }
                 }
             />
